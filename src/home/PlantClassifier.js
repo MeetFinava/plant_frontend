@@ -97,10 +97,9 @@ export default function PlantClassifier() {
     formData.append("lang", "en"); // You can change this dynamically
 
     try {
-      const response = await axios.post(
-        "https://plant-backend-one.vercel.app/predict",
-        formData
-      );
+      const response = await axios.post("https://plant-backend-one.vercel.app/predict", formData, {
+        headers: { "Content-Type": "multipart/form-data" }
+      });      
       if (response.status === 200) {
         setData(response.data);
       }
