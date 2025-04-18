@@ -1,7 +1,7 @@
-import { ImageUpload } from "./home";
+import PlantClassifier from "./home/PlantClassifier";
 
 function App() {
-  return <ImageUpload />;
+  return <PlantClassifier />;
 }
 
 export default App;
